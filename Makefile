@@ -101,6 +101,7 @@ $(COBJS): out/%.o: ir/%.c
 ELC_SRCS := \
 	elc.c \
 	util.c \
+	22lan_extended.c \
 	asmjs.c \
 	arm.c \
 	awk.c \
@@ -275,6 +276,10 @@ include diff.mk
 build: $(TEST_RESULTS)
 
 # Targets
+
+TARGET := 22lan_extended
+RUNNER := 22lan_deref.py
+include target.mk
 
 TARGET := rb
 RUNNER := ruby
